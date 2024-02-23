@@ -6,9 +6,9 @@ async function main() {
 
   const vault = await Vault.deploy();
 
-  await vault.deployed();
+  await vault.waitForDeployment();
 
-  console.log("Vault deployed to:", vault.address);
+  console.log("Vault deployed to:", vault.target);
 }
 
 main()
